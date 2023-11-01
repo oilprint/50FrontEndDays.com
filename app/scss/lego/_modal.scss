@@ -1,0 +1,84 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba($black, 0.3);
+  backdrop-filter: blur(1px);
+  transition: opacity 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+      transform: scale(0);
+    }
+  }
+}
+
+.modal {
+  position: relative;
+  max-width: 450px;
+  width: 90%;
+  padding: 40px;
+  text-align: center;
+  background-color: $light;
+  border-radius: 6px;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  transform: scale(1);
+  overflow-y: scroll;
+  margin: 20px auto;
+  scroll-behavior: smooth;
+  transition: transform 0.5s;
+
+  @media (min-width: 375px) {
+    margin: auto;
+    overflow-y: hidden;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 530px;
+    margin: auto;
+    overflow-y: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    margin: auto;
+    overflow-y: hidden;
+  }
+
+  @media (min-width: 375px) and (orientation: landscape) {
+    margin: 20px auto;
+    overflow-y: scroll;
+  }
+
+
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: 1px solid rgba($black, 0.1);
+  }
+
+  &__icon {
+    fill: $primary;
+    transition: fill 0.3s;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 11px;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: $grey-dark;
+
+    @media (min-width: 480px) {
+      font-size: 20px;
+    }
+  }
+}
+
