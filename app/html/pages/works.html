@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50 Days of Front-End Creativity</title>
+
+  @@include('../components/fonts.html')
+
+  @@include('../components/favicon.html')
+
+
+  <link rel="stylesheet" href="css/works.min.css">
+</head>
+
+<body>
+  @@include('../components/header.html', {
+  "home": "current"
+  })
+  <main>
+    <section class="day1 section">
+      <div class="container">
+        <div class="heading day1__heading">
+          <p class="heading__headline">
+            Day 1. Expanding Cards
+          </p>
+          <h2 class="title heading__title">
+            Ride in Style:
+          </h2>
+          <p class="heading__subtitle">
+            Expensive Car Extravaganza
+          </p>
+        </div>
+        <ul class="day1__content">
+          <li class="day1__item active" style="background-image: url('./../images/day1/car1.jpg');" width="770" ,
+            height="460">
+            <h3 class="day1__caption">
+              Elegance in Motion
+            </h3>
+          </li>
+          <li class="day1__item" style="background-image: url('./../images/day1/car2.jpg');" width="770", height="460">
+            <h3 class="day1__caption">
+              Speed & Elegance
+            </h3>
+          </li>
+          <li class="day1__item" style="background-image: url('./../images/day1/car3.jpg');" width="770", height="460">
+            <h3 class="day1__caption">
+              Luxury Wheels
+            </h3>
+          </li>
+          <li class="day1__item" style="background-image: url('./../images/day1/car4.jpg');" width="770", height="460">
+            <h3 class="day1__caption">
+              Auto Elegance
+            </h3>
+          </li>
+          <li class="day1__item" style="background-image: url('./../images/day1/car5.jpg');" width="770", height="460">
+            <h3 class="day1__caption">
+              Dream Drives
+            </h3>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+  </main>
+  @@include('../components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
