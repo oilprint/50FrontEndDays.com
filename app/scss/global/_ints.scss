@@ -1,0 +1,30 @@
+.button {
+  padding: 10px 50px;
+  border-radius: 20px;
+  font-size: 19px;
+  line-height: 1;
+  border: 1px solid $accent-secondary;
+  color: $white;
+  background-color: $accent-secondary;
+  transition: outline 0.4s, transform 0.4s, background-color 0.4s, color 0.4s;
+
+  &:focus {
+    outline: 1px solid $accent-secondary;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  &:hover {
+    background-color: $accent;
+  }
+
+  &:disabled {
+    background-color: $dark;
+    color: $secondary;
+    pointer-events: none;
+  }
+
+}
