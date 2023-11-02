@@ -1,9 +1,9 @@
 .button {
-  padding: 10px 50px;
-  border-radius: 20px;
+  padding: 14px 56px;
+  border-radius: 30px;
   font-size: 19px;
   line-height: 1;
-  border: 1px solid $accent-secondary;
+  border: 1px solid $accent-dark;
   color: $white;
   background-color: $accent-secondary;
   transition: outline 0.4s, transform 0.4s, background-color 0.4s, color 0.4s;
@@ -18,13 +18,14 @@
   }
 
   &:hover {
-    background-color: $accent;
+    background-color: $accent-dark;
   }
 
   &:disabled {
     background-color: $dark;
     color: $secondary;
     pointer-events: none;
+    border-color: $secondary;
   }
 
 }

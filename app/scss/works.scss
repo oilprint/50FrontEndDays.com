@@ -105,7 +105,9 @@
     }
 
     &.active {
-      border-color: $accent;
+      // border-color: $accent;
+      border: 2px solid $accent;
+      color: $accent;
 
       &::before {
         border-top: 1px dotted $accent;
@@ -129,7 +131,7 @@
   &__button-box {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
 
   &__button:not(:last-child) {
