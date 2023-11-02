@@ -1,7 +1,6 @@
 @import 'global/global';
 
 .day1 {
-
   &__heading {
     margin-bottom: 60px;
   }
@@ -64,4 +63,137 @@
     opacity: 0;
     transition: opacity 0.3s 0.5s;
   }
+}
+
+.day2 {
+  &__title {
+    font-size: 80px;
+  }
+
+  &__progress-box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    font-size: 50px;
+    color: $white;
+    border-radius: 50%;
+    border: 1px solid $white;
+
+    &:not(:first-child) {
+      &::before {
+        position: absolute;
+        content: '';
+        width: 160px;
+        height: 1px;
+        left: -175px;
+        border-top: 1px dotted $secondary;
+      }
+    }
+
+    &.active {
+      border-color: $accent;
+
+      &::before {
+        border-top: 1px dotted $accent;
+      }
+
+      .day2__item-text {
+        opacity: 1;
+      }
+    }
+}
+
+  &__item-text {
+    opacity: 0;
+    font-size: 17px;
+    position: absolute;
+    color: $secondary;
+    white-space: nowrap;
+    bottom: -40px;
+  }
+
+  &__button-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__info {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 60px;
+
+    &::before {
+      position: absolute;
+      content: '1';
+      font-family: 'Nastup-Basic',
+        sans-serif;
+      font-size: 66px;
+      text-align: right;
+      color: rgba($secondary, 0.2);
+      top: -16px;
+      left: -60px;
+      width: 50px;
+    }
+
+    &--2 {
+      &::before {
+        content: '2';
+      }
+    }
+
+    &--3 {
+      &::before {
+        content: '3';
+      }
+    }
+
+    &--4 {
+      &::before {
+        content: '4';
+      }
+    }
+  }
+
+  &__headline {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: $accent;
+  }
+
+  &__txt {
+    color: $secondary;
+
+  }
+
+
+
+
+
 }
