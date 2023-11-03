@@ -1,0 +1,56 @@
+@import 'global/global';
+
+.day3 {
+
+  &__top {
+    margin-bottom: 60px;
+  }
+
+  &__heading {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    font-size: 75px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__info {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__headline {
+    margin-bottom: 16px;
+    font-size: 38px;
+    color: $accent;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__subtitle {
+    margin-bottom: 4px;
+    color: $light;
+    font-size: 24px;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+
+
+}
