@@ -18,51 +18,72 @@ cards.forEach(item => {
 
 // day2. Creating The Steps
 
-const prev = document.querySelector('#prev');
-const next = document.querySelector('#next');
-const items = document.querySelectorAll('.day2__item');
+// const prev = document.querySelector('#prev');
+// const next = document.querySelector('#next');
+// const items = document.querySelectorAll('.day2__item');
 
-let currentActive = 1;
+// let currentActive = 1;
 
-console.log(next);
-next.addEventListener('click', () => {
-  currentActive++;
-  if (currentActive > items.length) {
-    currentActive = items.length;
-  }; 
+// console.log(next);
+// next.addEventListener('click', () => {
+//   currentActive++;
+//   if (currentActive > items.length) {
+//     currentActive = items.length;
+//   }; 
 
-  update(); 
+//   update(); 
+// })
+
+// prev.addEventListener('click', () => {
+//   currentActive--;
+
+//   if (currentActive < 1) {
+//     currentActive = 1;
+//   };
+
+//   update(); 
+// });
+
+// function update(){
+//   items.forEach((item, idx) => {
+//     if (idx < currentActive) {
+//       item.classList.add('active');
+//     } else {
+//       item.classList.remove('active');
+//     }
+//   })
+
+//   if (currentActive === 1) {
+//   prev.disabled = true;
+//   console.log("prev");
+// } else if (currentActive === items.length) {
+//   next.disabled = true;
+//   console.log("next");
+// } else {
+//   prev.disabled = false;
+//   next.disabled = false;
+// }
+// console.log(currentActive);
+// }
+
+
+// day3  Rotating Navigation
+const openBtn = document.getElementById('open');
+const closeBtn = document.getElementById('close');
+const content = document.querySelector('.container-day3');
+const navDay3 = document.querySelector('.nav-day3');
+
+console.log(openBtn);
+console.log(closeBtn);
+console.log(content);
+
+openBtn.addEventListener('click', () => {
+  content.classList.add('show-nav');
+  navDay3.classList.add('show');
+
 })
 
-prev.addEventListener('click', () => {
-  currentActive--;
-
-  if (currentActive < 1) {
-    currentActive = 1;
-  };
-
-  update(); 
-});
-
-function update(){
-  items.forEach((item, idx) => {
-    if (idx < currentActive) {
-      item.classList.add('active');
-    } else {
-      item.classList.remove('active');
-    }
-  })
-
-  if (currentActive === 1) {
-  prev.disabled = true;
-  console.log("prev");
-} else if (currentActive === items.length) {
-  next.disabled = true;
-  console.log("next");
-} else {
-  prev.disabled = false;
-  next.disabled = false;
-}
-console.log(currentActive);
-}
-
+closeBtn.addEventListener('click', () => {
+  content.classList.remove('show-nav');
+  navDay3.classList.remove('show');
+})
