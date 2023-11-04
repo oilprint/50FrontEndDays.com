@@ -68,22 +68,32 @@ cards.forEach(item => {
 
 
 // day3  Rotating Navigation
-const openBtn = document.getElementById('open');
-const closeBtn = document.getElementById('close');
-const content = document.querySelector('.container-day3');
-const navDay3 = document.querySelector('.nav-day3');
+// const openBtn = document.getElementById('open');
+// const closeBtn = document.getElementById('close');
+// const content = document.querySelector('.container-day3');
+// const navDay3 = document.querySelector('.nav-day3');
 
-console.log(openBtn);
-console.log(closeBtn);
-console.log(content);
+// console.log(openBtn);
+// console.log(closeBtn);
+// console.log(content);
 
-openBtn.addEventListener('click', () => {
-  content.classList.add('show-nav');
-  navDay3.classList.add('show');
+// openBtn.addEventListener('click', () => {
+//   content.classList.add('show-nav');
+//   navDay3.classList.add('show');
+// })
 
-})
+// closeBtn.addEventListener('click', () => {
+//   content.classList.remove('show-nav');
+//   navDay3.classList.remove('show');
+// })
 
-closeBtn.addEventListener('click', () => {
-  content.classList.remove('show-nav');
-  navDay3.classList.remove('show');
+//day 4 search btn in header
+
+const searchBtn = document.querySelector('.search__btn');
+const searchField = document.querySelector('.search');
+const searchInpur = document.querySelector('.search__input');
+
+searchBtn.addEventListener('click', () => {
+  searchField.classList.toggle('active');
+  searchInpur.focus();
 })

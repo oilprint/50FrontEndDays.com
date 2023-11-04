@@ -1,0 +1,154 @@
+.header {
+  border-bottom: 1px solid $secondary;
+  padding: 20px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 96px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 21px;
+
+     &::before {
+       content: '';
+       position: absolute;
+       width: 100%;
+       height: 2px;
+       left: 0;
+       bottom: -6px;
+       background-color: rgba($secondary, 0.5);
+       transform-origin: right;
+       transform: scaleX(0);
+       transition: transform 0.4s ease-in-out;
+     }
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+
+    &:active {
+      color: $primary;
+      opacity: 0, 5;
+
+      &:before {
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+    }
+
+
+    &.current {
+      color: $secondary;
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+    }
+  }
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+
+  &.active {
+    .search__input {
+      width: 200px;
+      transform: translateX(-200px);
+      
+    }
+    .search__btn {
+       border-radius: 0 24px 24px 0 ;
+      border-top: 1px solid $accent-dark;
+      border-right: 1px solid $accent-dark;
+      border-bottom: 1px solid $accent-dark;
+      background-color: rgba($accent-secondary, 0.4);
+    }
+  }
+
+
+  &__input {
+    padding: 4px 15px;
+    border-radius: 24px 0 0 24px ;
+    border-top: 1px solid $accent-dark;
+    border-left: 1px solid $accent-dark;
+    border-bottom: 1px solid $accent-dark;
+    width: 48px;
+    height: 48px;
+    color: $white;
+     transform-origin: right;
+    background-color: rgba($accent-secondary, 0.4);
+    transition: width 0.8s ease, transform 0.3 ease;
+  }
+
+  &__btn {
+     position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: $dark;
+    //  border-radius: 0 24px 24px 0 ;
+    // border-top: 1px solid $accent-dark;
+    // border-right: 1px solid $accent-dark;
+    // border-bottom: s1px solid $accent-dark;
+
+    &:focus {
+      outline: solid 1px rgba($secondary, 0);
+    }
+
+    &:hover {
+      
+      .search__icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      .btn__icon {
+        fill: $accent-secondary;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $secondary;
+    transition: fill 0.4s;
+  }
+}
