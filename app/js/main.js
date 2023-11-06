@@ -97,3 +97,50 @@ searchBtn.addEventListener('click', () => {
   searchField.classList.toggle('active');
   searchInpur.focus();
 })
+
+
+//day5
+
+const loadText = document.querySelector('.day5__loading-text');
+const loadBg = document.querySelector('.day5__bg');
+console.log(loadBg);
+
+let load = 0;
+let int = setInterval(blurring, 30);
+
+function blurring() {
+  load++;
+  if (load >99) {
+    clearInterval(int)
+  }
+  loadText.innerText = `${load}%`;
+  loadText.style.opacity = scale(load, 0, 100, 1, 0);
+  loadBg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
+}
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+}
+
+//day6 
+
+const boxesDay6 = document.querySelectorAll('.day6__item');
+
+window.addEventListener('scroll', checkBoxes);
+
+checkBoxes()
+
+function checkBoxes() {
+  const triggerBottom = window.innerHeight / 5 * 4;
+ console.log(triggerBottom);
+
+  boxesDay6.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+console.log(boxTop);
+    if (boxTop < triggerBottom) {
+      box.classList.add('show');
+    } else {
+      box.classList.remove('show');
+    }
+  });
+}

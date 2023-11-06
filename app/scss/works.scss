@@ -235,3 +235,80 @@
 
   }
 }
+
+.day5 {
+  
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+     width: 100vw;
+     height: 100vh;
+  }
+ 
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__bg {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(0px);
+  }
+
+  &__loading-text {
+    font-size: 200px;
+    color: $white;
+    z-index: 2;
+  }
+  
+}
+
+.day6 {
+
+  &__title {
+    font-size: 70px;
+  }
+
+  &__heading {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    transform: translateX(200%);
+    transition: transform 1s;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    &:nth-of-type(even) {
+      transform: translateX(-200%);
+    }
+
+    &.show {
+      transform: translateX(0);
+    }
+    
+
+
+  }
+
+  &__title-h3 {
+    font-size: 24px;
+    color: $accent;
+    margin-bottom: 10px;
+  }
+
+}
