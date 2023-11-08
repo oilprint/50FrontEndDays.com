@@ -131,12 +131,12 @@ window.addEventListener('scroll', checkBoxes);
 checkBoxes()
 
 function checkBoxes() {
-  const triggerBottom = window.innerHeight / 5 * 4;
- console.log(triggerBottom);
+  const triggerBottom = window.innerHeight / 4 * 3;
+
 
   boxesDay6.forEach(box => {
     const boxTop = box.getBoundingClientRect().top;
-console.log(boxTop);
+
     if (boxTop < triggerBottom) {
       box.classList.add('show');
     } else {
@@ -144,3 +144,42 @@ console.log(boxTop);
     }
   });
 }
+
+
+//day7
+
+const right = document.querySelector('.day7__item--rigth');
+const left = document.querySelector('.day7__item--left');
+const day7Title = document.querySelector('.day7__title');
+const contentDay7 = document.querySelector('.day7__list');
+console.log(right);
+console.log(left);
+console.log(contentDay7);
+
+
+
+ left.addEventListener('mouseenter', () => {
+  console.log('dhdhjdjd');
+  contentDay7.classList.add('hover-left');
+ });
+
+ left.addEventListener('mouseleave', () => {
+ 
+  contentDay7.classList.remove('hover-left');
+ });
+
+
+ right.addEventListener('mouseenter', () => {
+  console.log('dhdhjdjd');
+  contentDay7.classList.add('hover-rigth');
+ });
+
+ right.addEventListener('mouseleave', () => {
+ 
+  contentDay7.classList.remove('hover-rigth');
+ });
+
+ 
+
+
+
