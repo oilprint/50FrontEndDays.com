@@ -419,3 +419,44 @@
 
 
 }
+
+.day8 {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 50px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 350px;
+    height: 350px;
+    border: solid 3px $primary;
+    background: rgba($bg, 0.6);
+
+    &.hovered {
+      background-color: $primary;
+      border-color: $accent;
+    }
+   
+  }
+
+  &__fill {
+    width: 346px;
+    height: 346px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+     &.hold {
+       border: solid 5px $accent-dark;
+     }
+  }
+}
