@@ -71,8 +71,13 @@ main {
 
 }
 
-.heading {
+.title-h3 {
+  font-size: 24px;
+  color: $accent;
+}
 
+.heading {
+margin-bottom: 60px;
   &__subtitle {
     font-size: 24px;
     color: $accent;
@@ -81,7 +86,7 @@ main {
 }
 
 .footer {
-  height: 300px;
+  height: 400px;
   background-color: $dark;
 }
 
